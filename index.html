@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Página con Marcos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Frame A - Superior */
+    #frameA {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background-color: #f0f0f0;
+      border-bottom: 2px solid #ccc;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    /* Frame B - Inferior Izquierda */
+    #frameB {
+      position: fixed;
+      top: 40%;
+      left: 0;
+      width: 25%;
+      height: 60%;
+      background-color: #e6f7ff;
+      border-right: 2px solid #ccc;
+    }
+
+    /* Frame C - Inferior Derecha */
+    #frameC {
+      position: fixed;
+      top: 40%;
+      left: 25%;
+      width: 75%;
+      height: 60%;
+      background-color: #6bc2df;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .titulo {
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .valoracion {
+      text-align: center;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .gif {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .menu {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .menu select {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: #1cbcd5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Frame A (Superior) -->
+  <div id="frameA">
+    <img src="ME.jpeg" alt="Mi Foto" style="width: 150px; float: left; margin-right: 15px;">
+    <div class="titulo">FILA A</div>
+    <p><strong>Nombre:</strong> Gabriel Paredes</p>
+
+    <div class="valoracion">⭐⭐⭐⭐☆</div>
+
+    <div class="gif">
+      <img src="M.gif" alt="GIF de letras" style="width: 140px;">
+    </div>
+
+    <div class="menu">
+      <label for="temas">Menú:</label>
+      <select name="temas" id="temas">
+        <option>Perfil</option>
+        <option>Proyectos</option>
+        <option>Contacto</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Frame B (Izquierda Inferior) -->
+  <div id="frameB">
+    <iframe src="https://matrix.fandom.com/wiki/The_Matrix" width="100%" height="100%" frameborder="0"></iframe>
+  </div>
+
+  <!-- Frame C (Derecha Inferior) -->
+  <div id="frameC">
+    <h2>Formulario de Registro</h2><BR><BR>
+    <form><H3>NOMBRE</H3>
+      <input type="text" placeholder="Nombre completo" required><H3>E-MAIL</H3>
+      <input type="email" placeholder="Correo electrónico" required><H3>ASUNTO</H3>
+      <textarea placeholder="Pedir presupuesto, websolicitar cita previa, otros"></textarea>
+	  <p><h3>¿como nos ha conocido?</h3></p><br><br>
+	  <button type="submit">+</button>
+	     <label for="msg"><p><h3>ESCRIBE TU MENSAJE</h3></p></label>
+    <textarea id="msg" name="user_message"></textarea>
+  <div class="button">
+    <button type="submit">Envia tu mensaje</button>
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+
+</body>
+</html>
